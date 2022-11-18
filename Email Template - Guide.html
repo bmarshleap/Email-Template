@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+   <head>
+      <meta charset="utf-8">
+      <!-- utf-8 works for most cases -->
+      <meta name="viewport" content="width=device-width">
+      <!-- Forcing initial-scale shouldn't be necessary -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Use the latest (edge) version of IE rendering engine -->
+      <meta name="x-apple-disable-message-reformatting">
+      <!-- Disable auto-scale in iOS 10 Mail entirely -->
+      <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+      <!-- Tell iOS not to automatically link certain text strings. -->
+      <title></title>
+      <!-- The title tag shows in email notifications, like Android 4.4. -->
+      <!-- CSS Reset : BEGIN -->
+      <!-- This resetes many of the quirks of various email browsers. Do not touch unless you intend to change these -->
+      <!--[if mso]>
+      <style type="text/css">
+         body, table, td, th, h1, h2, h3, h4, h5, h6, p, a, span {font-family: Arial, Helvetica, sans-serif !important;}
+      </style>
+      <![endif]-->
+      <style>
+         /* What it does: Remove spaces around the email design added by some email clients. */
+         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+         html,
+         body {
+         margin: 0 !important;
+         padding: 0 !important;
+         height: 100% !important;
+         width: 100% !important;
+         background-color: #ffffff;
+         }
+
+         textarea {
+            margin: 0 auto !important;
+            resize: none;
+         }
+         /* What it does: Stops email clients resizing small text. */
+         * {
+         -ms-text-size-adjust: 100%;
+         -webkit-text-size-adjust: 100%;
+         }
+         /* What it does: Centers email on Android 4.4 */
+         div[style*="margin: 16px 0"] {
+         margin: 0 !important;
+         }
+         /* What it does: Stops Outlook from adding extra spacing to tables. */
+         table,
+         td th{
+         mso-table-lspace: 0pt !important;
+         mso-table-rspace: 0pt !important;
+         border:  1px;
+         border-color: #ff0000;
+         }
+         /* What it does: Fixes webkit padding issue. */
+         table {
+         border-spacing: 0 !important;
+         border-collapse: collapse !important;
+         table-layout: fixed !important;
+         margin: 0 auto !important;
+         }
+         /* What it does: Uses a better rendering method when resizing images in IE. */
+         img {
+         -ms-interpolation-mode:bicubic;
+         }
+         /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+         a {
+         text-decoration: none;
+         }
+         /* What it does: A work-around for email clients meddling in triggered links. */
+         a[x-apple-data-detectors],  /* iOS */
+         .unstyle-auto-detected-links a,
+         .aBn {
+         border-bottom: 0 !important;
+         cursor: default !important;
+         color: inherit !important;
+         text-decoration: none !important;
+         font-size: inherit !important;
+         font-family: inherit !important;
+         font-weight: inherit !important;
+         line-height: inherit !important;
+         }
+         /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+         .im {
+         color: inherit !important;
+         }
+         /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+         .a6S {
+         display: none !important;
+         opacity: 0.01 !important;
+         }
+         /* If the above doesn't work, add a .g-img class to any image in question. */
+         img.g-<img + div {
+         display: none !important;
+         }
+         /* Create one of these media queries for each additional viewport size you'd like to fix */
+         /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+         @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+         u ~ div .email-container {
+         min-width: 320px !important;
+         }
+         }
+         /* iPhone 6, 6S, 7, 8, and X */
+         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+         u ~ div .email-container {
+         min-width: 375px !important;
+         }
+         }
+         /* iPhone 6+, 7+, and 8+ */
+         @media only screen and (min-device-width: 414px) {
+         u ~ div .email-container {
+         min-width: 414px !important;
+         }
+         }
+      </style>
+      <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+      <!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!-- CSS Reset : END -->
+      <!-- Progressive Enhancements : BEGIN -->
+      <!-- This is where style changes specific to Leap begin. These can be changed, with the approval of Alexander Baldridge, some one else with a degree in graphic design, or any of his superiors -->
+      <style>
+         /*What it does: Imports Poppins for email clients which can use it*/
+         /*N.B. - only Latin, non extended version has been linked. Some font weights are not present. Contact Xander to get more font weights.*/
+         /*
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 300;
+         font-display: swap;
+         src: local('Poppins Light Italic'), local('Poppins-LightItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLm21lVF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Poppins Italic'), local('Poppins-Italic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiGyp8kv8JHgFVrJJLucHtAOvWDSA.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 500;
+         font-display: swap;
+         src: local('Poppins Medium Italic'), local('Poppins-MediumItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLmg1hVF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 600;
+         font-display: swap;
+         src: local('Poppins SemiBold Italic'), local('Poppins-SemiBoldItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLmr19VF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 700;
+         font-display: swap;
+         src: local('Poppins Bold Italic'), local('Poppins-BoldItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLmy15VF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 800;
+         font-display: swap;
+         src: local('Poppins ExtraBold Italic'), local('Poppins-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLm111VF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 300;
+         font-display: swap;
+         src: local('Poppins Light'), local('Poppins-Light'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 500;
+         font-display: swap;
+         src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 600;
+         font-display: swap;
+         src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 700;
+         font-display: swap;
+         src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 800;
+         font-display: swap;
+         src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLDD4Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         */
+         /* What it does: Hover styles for buttons */
+         .button-td,
+         .button-a {
+         transition: all 300ms ease-out;
+         border-color: #26d07c !important;
+         }
+         .button-td-primary:hover,
+         .button-a-primary:hover {
+         background: #8edd65 !important;
+         border-color: #8edd65 !important;
+         }
+         /* Media Queries */
+         @media screen and (max-width: 480px) {
+         /* What it does: Forces table cells into full-width rows. */
+         .stack-column,
+         .stack-column-center {
+         display: block !important;
+         width: 100% !important;
+         max-width: 100% !important;
+         direction: ltr !important;
+         }
+         /* And center justify these ones. */
+         .stack-column-center {
+         text-align: center !important;
+         }
+         /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+         .center-on-narrow {
+         text-align: center !important;
+         display: block !important;
+         margin-left: auto !important;
+         margin-right: auto !important;
+         float: none !important;
+         }
+         table.center-on-narrow {
+         display: inline-block !important;
+         }
+         /* What it does: Adjust typography on small screens to improve readability */
+         .email-container p {
+         font-size: 17px !important;
+         }
+         h1{
+         font-size: 22px!important;
+         }
+         h2{
+         font-size: 20px!important;
+         }
+         h3{
+         font-size: 18px!important;
+         }
+         h4, h5, h6 {
+         font-size: 16px!important;
+         }
+         }
+      </style>
+      <!-- Progressive Enhancements : END -->
+   </head>
+
+   <body>
+<table width="1000" border="0" cellpadding="50"><tr><td width="600" valign="top">  
+
+<iframe src="Email%20Template/20220831_Null_Null_Email_EmailTemplate_Master.html" onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));' style="height:3060px; width:  610px; border:none;overflow:hidden;"></iframe>
+
+
+</td><td width="400" valign="top">
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Logo with Subhead + CTA</p>
+    <textarea id="w3review" name="w3review" rows="2" cols="50">
+      <!--TOP HEADER-->
+      <table border="0" cellpadding="0" style="max-width: 600px;" width="600" >
+         <tbody>
+            <tr>
+               <td align="left" valign="bottom" style="">
+                  <img src="https://go.leaptodigital.com/l/492601/2022-06-15/58s5pp/492601/16553175415okVJWbu/LeapLogoBlack.png" width="150" height="48">
+               </td>
+               <td align="right" valign="bottom">
+                  <p style="font-family: Poppins, arial, sans-serif; color: rgb(46, 46, 46); text-align: right; line-height: 1; margin:  0; font-size: 12px; font-weight: 500;">
+                     Quick Subhead Line Goes Here
+                  </p>
+                  <a href="http://www.google.com">
+                     <p style="color:#26d07c; font-size: 13px; margin: 0; line-height: 1; font-weight: 700; font-family: Poppins, arial, sans-serif; text-align: right; text-decoration: none!important;;">This Is A CTA</p>
+                  </a>
+                  </h4>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+    </textarea> 
+
+    <BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Center Hero Image</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50">
+   <table border="0" style="max-width: 600px; margin: 0px;" width="600" height="300">
+         <tbody>
+            <tr>
+               <td>
+                  <img src="https://go.leaptodigital.com/l/492601/2022-08-10/5dxjfy/492601/1660172989CDQINPnj/Windows_Email1_Header.png" width="600" height="300">
+               </td>
+            </tr>
+         </tbody>
+      </table>
+    </textarea>  
+
+    <BR><BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Center Headline, Subtext, and CTA</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50">
+      <table border="0" style="max-width:  600px;" width="600" cellpadding="0">
+         <tbody>
+            <tr>
+               <td width="" valign="top">
+                  <div align="center">
+                     <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 30px; font-weight: 800; color: #2e2e2e; width: 100%; text-align: center; line-height: 1; width: 500px;">This is a two line headline that will display 400px long</h1>
+                  </div>
+                  <div align="center">
+                     <p style="text-align: center; font-family: 'Poppins', arial, sans-serif; font-size:14px;max-width: 550px;">
+                        This text block will display to a full width size. The max character count is unlimited and the max width is 550px wide. There is a CTA underneath the main block of text.
+                     </p>
+                  </div>
+                  <!--CTA-->
+                  <table align="center">
+                     <tbody>
+                        <tr>
+                           <td class=""><a bgcolor="26D07C" href="https://leaptodigital.zoom.us/webinar/register/WN_Xoj750uVT16t-5mMFIctZQ" style="background-color: #26D07C; border: 15px solid #26D07C; padding: 0 10px; color: #ffffff; font-family: 'Poppins', arial, sans-serif; font-size: 14px; line-height: 1; text-align: center;  text-decoration: none; display: block; border-radius: 8px; font-weight: bold; ">
+                              CTA Text Goes Here</a>
+                              <br>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+    </textarea>  
+
+<BR><BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Left Justified Headline with Small Content Block</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50"><table border="0" style="max-width: 600px; margin: 0px;" width="600" cellpadding="0">
+         <tbody>
+            <tr>
+               <td width="330" valign="top" style="padding-right: 15px;">
+                  <h1 style=" font-family: 'Poppins', arial, sans-serif; font-size: 33px; margin: 0px; font-weight: 800; color: #2e2e2e; text-align: left; line-height: 1;">This Headline is Left Justified</h1>
+                  <br>
+                  <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">
+                     This text block will display to a full width size. The max character count is unlimited and the max width is 550px wide. There is a CTA underneath the main block of text.
+                  </p>
+                  <br>
+                  <table align="left">
+                     <tbody>
+                        <tr>
+                           <td class=""><a bgcolor="26D07C" href="https://leaptodigital.zoom.us/webinar/register/WN_vy7-g2wQQoCCDV9uy2_DiQ" style="background-color: #26D07C; border: 15px solid #26D07C; padding: 0 10px; color: #ffffff; font-family: 'Poppins', arial, sans-serif; font-size: 14px; line-height: 1.1; text-align: center;  text-decoration: none; display: block; border-radius: 8px; font-weight: bold; ">CTA Goes Here</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="230" valign="top" style="background-color: #26D07C; border-radius: 15px; padding: 15px;">
+                  <table border="0" style="max-width: 220px; margin: 0px;">
+                     <tbody>
+                        <tr>
+                           <td>
+                              <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 18px; font-weight: 700; color: #fff; width: 100%; text-align: center; line-height:28px; margin: 0px;">Small Headline Here</h1>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" style="max-width: 230px; margin: 0px;" align="left" cellpadding="2">
+                     <tbody>
+                        <tr>
+                           <td valign="center" align="center"><img style="width: 50px; height: 50px; margin: 0px; margin-top:5px;" src="https://go.leaptodigital.com/l/492601/2022-08-18/5f111r/492601/1660846265sbnypcQD/50x50.png"></td>
+                           <td class="">
+                              <p style="font-family: 'Poppins', arial, sans-serif; font-size:  12px; line-height: 1.1; font-weight: 400; color: #2e2e2e; text-align: left; padding-left:  10px; margin: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="center"><img style="width: 50px; height: 50px;" src="https://go.leaptodigital.com/l/492601/2022-08-18/5f111r/492601/1660846265sbnypcQD/50x50.png"></td>
+                           <td class="">
+                              <p style="font-family: 'Poppins', arial, sans-serif; font-size:  12px; line-height: 1.1; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="center"><img style="width: 50px; height: 50px;" src="https://go.leaptodigital.com/l/492601/2022-08-18/5f111r/492601/1660846265sbnypcQD/50x50.png"></td>
+                           <td class="">
+                              <p style="font-family: 'Poppins', arial, sans-serif; font-size:  12px; line-height: 1.1; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td valign="center"><img style="width: 50px; height: 50px;" src="https://go.leaptodigital.com/l/492601/2022-08-18/5f111r/492601/1660846265sbnypcQD/50x50.png"></td>
+                           <td class="">
+                              <p style="font-family: 'Poppins', arial, sans-serif; font-size:  12px; line-height: 1.1; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+    </textarea>  
+
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Right Justified Headline with Left Justified Hero Image</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50"><table border="0" style="max-width: 600px;" width="600" cellpadding="10">
+         <tbody>
+            <tr>
+               <td style="" valign="top" width="250" class="">
+                  <img src="https://go.leaptodigital.com/l/492601/2022-08-11/5dxkzr/492601/1660227358jOpB0Ucn/Windows_Email2_Header.png">
+               </td>
+               <td style="padding-top: 0px;" valign="top" class="">
+                  <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 30px; font-weight: 800; color: #2e2e2e; width: 100%; text-align: left; line-height: 1;">This Headline is Right Justified</h1>
+                  <p style="margin-bottom:11px; text-align: left;"><span style=" text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px;">Your customers want the same product, service, and quality every time, everywhere. In our new blog, <b>“Window Nation’s Aaron Magden Shares 6 Tips to Scaling an Enterprise Window Company”</b> and provides examples of why consistency in your sales processes matters. 
+                     </span>
+                  </p>
+                  <table align="left">
+                     <tbody>
+                        <tr>
+                           <td class=""><a bgcolor="26D07C" href="https://leaptodigital.zoom.us/webinar/register/WN_vy7-g2wQQoCCDV9uy2_DiQ" style="background-color: #26D07C; border: 15px solid #26D07C; padding: 0 10px; color: #ffffff; font-family: 'Poppins', arial, sans-serif; font-size: 14px; line-height: 1.1; text-align: center;  text-decoration: none; display: block; border-radius: 8px; font-weight: bold; ">CTA Goes Here</a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+    </textarea> 
+
+    <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Title with 4 Feature Block</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50"><table border="0" style="max-width: 600px;" width="600" cellpadding="0">
+         <tbody><tr>
+            <td>
+               <table border="0" style="max-width: 580px; margin: 0px;" width="600">
+                  <tbody>
+                     <tr>
+                        <td class="">
+                           <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 20px; font-weight: 700; color: #2e2e2e; width: 100%; text-align: center; line-height:1.1;"><span style="color:#2e2e2e;">Title for 4 Feature Block Goes Here</span></h1>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table border="0" style="max-width: 580px;" width="600">
+                  <tbody>
+                     <tr>
+                        <td style="padding-top: 0px;" valign="top" width="175">
+                           <table align="left" border="0" style="margin: 0px;">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" height="65" valign="center" width="65" class=""><img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrr/492601/1660845376mcr8e9zW/40x40.png" style="width: 40px; height: 40px; margin: 0px; margin-top:10px"></td>
+                                    <td height="65" width="400" class="">
+                                       <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; padding-left: 10px; line-height:  1;">Bullet Point 1</h1>
+                                       <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px; margin-top: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada maximus.</p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td style="padding-top: 0px;" valign="top" width="175">
+                           <table align="left" border="0" style="margin: 0px;">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" height="65" valign="center" width="65" class=""><img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrr/492601/1660845376mcr8e9zW/40x40.png" style="width: 40px; height: 40px; margin: 0px; margin-top:10px">
+                                    </td>
+                                    <td height="65" width="400" class="">
+                                       <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; padding-left: 10px; line-height:  1;">Bullet Point 2</h1>
+                                       <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px; margin-top: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada maximus.</p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td valign="top" width="175">
+                           <table align="left" border="0" style="margin: 0px;">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" height="65" valign="center" width="65" class=""><img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrr/492601/1660845376mcr8e9zW/40x40.png" style="width: 40px; height: 40px; margin: 0px; margin-top:10px"></td>
+                                    <td height="65" width="400" class="">
+                                       <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; padding-left: 10px; line-height:  1;">Bullet Point 3</h1>
+                                       <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px; margin-top: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada maximus.</p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                        <td valign="top" width="175">
+                           <table align="left" border="0" style="margin: 0px;">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" height="65" valign="center" width="65" class=""><img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrr/492601/1660845376mcr8e9zW/40x40.png" style="width: 40px; height: 40px; margin: 0px; margin-top:10px"></td>
+                                    <td height="65" style="" width="400" class="">
+                                       <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; padding-left: 10px; line-height:  1;">Bullet Point 4</h1>
+                                       <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; padding-left: 10px; margin: 0px; margin-top: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer malesuada maximus.</p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody></table>
+    </textarea>  
+
+<BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Title with 4 Column Feature Blocks</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50"><table border="0" style="max-width: 600px;" width="600" cellpadding="0">
+         <tbody><tr>
+            <td>
+               <table border="0" style="max-width: 580px; margin: 0px;" width="600">
+                  <tbody>
+                     <tr>
+                        <td class="">
+                           <div align="center">
+                              <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 20px; font-weight: 700; color: #2e2e2e; width: 75%; text-align: center; line-height:1.1;"><span style="color:#2e2e2e;">Title for 4 Column Feature Block Goes Here, This is The Longer Headline Version</span></h1>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table border="0" style="max-width: 580px;" width="600" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td style="padding-top: 0px;" valign="top" width="25%">
+                           <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrn/492601/1660845376ZtFA0ocQ/120x50.png" width="120" height="50">
+                           <span style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700;">Two Line Title Will Go Here</span>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin-top: 3px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                        <td style="padding-top: 0px;" valign="top" width="25%">
+                           <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrn/492601/1660845376ZtFA0ocQ/120x50.png" width="120" height="50">
+                           <span style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700;">Two Line Title Will Go Here</span>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin-top: 3px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                        <td style="padding-top: 0px;" valign="top" width="25%">
+                           <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrn/492601/1660845376ZtFA0ocQ/120x50.png" width="120" height="50">
+                           <span style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700;">Two Line Title Will Go Here</span>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin-top: 3px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                        <td style="padding-top: 0px;" valign="top" width="25%">
+                           <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzrn/492601/1660845376ZtFA0ocQ/120x50.png" width="120" height="50">
+                           <span style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700;">Two Line Title Will Go Here</span>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin-top: 3px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody></table>
+    </textarea>  
+<BR><BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Title with 2 Column Feature Blocks</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50"><table border="0" style="max-width: 600px;" width="600" cellpadding="0">
+         <tbody><tr>
+            <td>
+               <table border="0" style="max-width: 580px; margin: 0px;" width="600">
+                  <tbody>
+                     <tr>
+                        <td class="">
+                           <div align="center">
+                              <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 20px; font-weight: 700; color: #2e2e2e; width: 75%; text-align: center; line-height:1.1;"><span style="color:#2e2e2e;">Title for 2 Column Feature Block Goes Here, This is The Longer Headline Version</span></h1>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table border="0" style="max-width: 580px;" width="600" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td style="padding-top: 0px;" valign="top" width="50%">
+                           <div align="center">
+                              <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzv8/492601/1660845945kvhRudhz/220x100.png" width="220" height="100">
+                           </div>
+                           <br>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700; margin:  0px; text-align: center;">Two Line Title Will Go Here
+                           </p><p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: center; margin: 0px; margin-top: 3px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                        <td style="padding-top: 0px;" valign="top" width="50%">
+                           <div align="center">
+                              <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzzv8/492601/1660845945kvhRudhz/220x100.png" width="220" height="100">
+                           </div>
+                           <br>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700; margin:  0px; text-align: center;">Two Line Title Will Go Here
+                           </p><p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: center; margin: 0px; margin-top: 3px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody></table>
+    </textarea>  
+
+<BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Single Line Left Image</p>
+ <textarea id="w3review" name="w3review" rows="3" cols="50"><table border="0" width="600" style="max-width: 600px;">
+         <tbody><tr>
+            <td>
+               <table align="center" border="0" style="max-width: 450px; margin: 0px;" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td align="center" valign="center" width="50">
+                           <img src="https://i.ytimg.com/vi/BU9pMMEFMJ0/maxresdefault.jpg" height="50" width="50">
+                        </td>
+                        <td valign="center" class="">
+                           <span style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700;">Single Line Title Goes Here</span>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody></table>
+    </textarea> 
+
+<BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Single Line Right Image</p>
+ <textarea id="w3review" name="w3review" rows="3" cols="50"><table border="0" width="600" style="max-width: 600px;">
+         <tbody><tr>
+            <td>
+               <table align="center" border="0" style="max-width: 450px; margin: 0px;" cellpadding="10">
+                  <tbody>
+                     <tr>
+                        <td valign="center" class="">
+                           <span style="font-family: 'Poppins', arial, sans-serif; font-size:  15px; line-height: 1.2; font-weight: 700;">Single Line Title Goes Here</span>
+                           <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porta ante a accumsan semperdolor sit amet.</p>
+                        </td>
+                        <td align="center" valign="center" width="50">
+                           <img src="https://i.ytimg.com/vi/BU9pMMEFMJ0/maxresdefault.jpg" height="50" width="50">
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+         </tr>
+      </tbody></table>
+    </textarea>  
+<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+   <p style="text-align:  left; font-family: 'Poppins', arial, sans-serif; font-size:14px; margin: 0px;">Centered Headline, Icons Left and Hero Image Right</p>
+ <textarea id="w3review" name="w3review" rows="8" cols="50"><table border="0" style="max-width: 600px; margin: 0px;" width="600">
+         <tbody>
+            <tr>
+               <td class="">
+                  <table border="0" style="max-width: 600px; margin: 0px;" width="600">
+                     <tbody>
+                        <tr>
+                           <td class="">
+                              <div align="center">
+                                 <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 25px; font-weight: 700; color: #2e2e2e; width: 100%; text-align: center; line-height: 1; max-width: 450px;">Centered Headline With Leap Feature Callouts Below</h1>
+                              </div>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table border="0" style="max-width: 600px;" width="600" cellpadding="10">
+                     <tbody>
+                        <tr>
+                           <td style="" valign="top" width="340">
+                              <table align="left" border="0" style="max-width: 450px;" cellpadding="0">
+                                 <tbody>
+                                    <tr>
+                                       <td align="center" width="60" valign="center" class=""><img src="https://go.leaptodigital.com/l/492601/2022-07-28/5dvmgy/492601/1659030459tjyQBOf4/icon1_60x60.png" style="width: 50px; height: 50px; margin: 0px;"></td>
+                                       <td height="80" style="padding-left: 10px;" class="">
+                                          <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; line-height:  1;">Efficient Estimates</h1>
+                                          <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin: 0;">Generate estimates and reduce the time it takes write contracts from 2 hours to 30 minutes.</p>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" width="60" valign="center" class=""><img src="https://go.leaptodigital.com/l/492601/2022-07-28/5dvmgr/492601/1659030458QNBVsILs/icon2_60x60.png" style="width: 50px; height: 50px; margin: 0px;"></td>
+                                       <td height="80" style="padding-left: 10px;" class="">
+                                          <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; line-height:  1;">Total Price Control</h1>
+                                          <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin: 0;">Put controls on pricing and discounting to prevent underbidding jobs and over-inflating costs.</p>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" width="60" valign="center" class=""><img src="https://go.leaptodigital.com/l/492601/2022-07-28/5dvmgv/492601/1659030458UO5Unh26/icon3_60x60.png" style="width: 50px; height: 50px; margin: 0px;"></td>
+                                       <td height="80" style="padding-left: 10px;" class="">
+                                          <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; line-height:  1;">Offer &amp; Compare Financing</h1>
+                                          <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.3; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin-top: 0px;">Empower your team to submit credit applications and receive decisions instantly to close more deals.</p>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td align="center" width="60" valign="center" class=""><img src="https://go.leaptodigital.com/l/492601/2022-07-28/5dvmgn/492601/16590304582J2RgyMm/icon4_60x60.png" style="width: 50px; height: 50px; margin: 0px;"></td>
+                                       <td height="80" style="padding-left: 10px;" class="">
+                                          <h1 style="font-family: 'Poppins', arial, sans-serif; font-size:  13px; font-weight: 700; color: #000; width: 100%; text-align: left; line-height:  1;">Remote Signatures</h1>
+                                          <p style="font-family: 'Poppins', arial, sans-serif; font-size:  11px; line-height: 1.2; font-weight: 400; color: #2e2e2e; text-align: left; margin: 0px; margin: 0;">Upload digital brochures and links to give homeowners a better customer experience.</p>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                           <td style="" valign="top" class="">
+                              <div align="center">
+                                 <img src="https://go.leaptodigital.com/l/492601/2022-08-18/5dzy8g/492601/1660835200yQkWPWu1/200x275.png">
+                              </div>
+                              <br>
+                              <table align="center">
+                                 <tbody>
+                                    <tr>
+                                       <td class=""><a bgcolor="26D07C" href="https://leaptodigital.com/the-simple-and-fast-way-to-convert-leads-into-customers/?utm_source=Webinar&amp;utm_medium=Email&amp;utm_campaign=20220728+no+show+email+1&amp;utm_id=20220728+no+show+email+1" style="background-color: #26D07C; border: 15px solid #26D07C; padding: 0 10px; color: #ffffff; font-family: 'Poppins', arial, sans-serif; font-size: 14px; line-height: 1.1; text-align: center;  text-decoration: none; display: block; border-radius: 8px; font-weight: bold; ">CTA Text Goes Here</a></td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+            </td></tr>
+            
+         </tbody>
+      </table>
+    </textarea> 
+
+</td></tr>
+</tbody>
+</table>
+   </body>
+</html>
