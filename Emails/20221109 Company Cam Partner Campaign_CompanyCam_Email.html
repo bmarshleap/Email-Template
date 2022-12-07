@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+   <head>
+      <meta charset="utf-8">
+      <!-- utf-8 works for most cases -->
+      <meta name="viewport" content="width=device-width">
+      <!-- Forcing initial-scale shouldn't be necessary -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Use the latest (edge) version of IE rendering engine -->
+      <meta name="x-apple-disable-message-reformatting">
+      <!-- Disable auto-scale in iOS 10 Mail entirely -->
+      <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
+      <!-- Tell iOS not to automatically link certain text strings. -->
+      <title></title>
+      <!-- The title tag shows in email notifications, like Android 4.4. -->
+      <!-- CSS Reset : BEGIN -->
+      <!-- This resetes many of the quirks of various email browsers. Do not touch unless you intend to change these -->
+      <!--[if mso]>
+      <style type="text/css">
+         body, table, td, th, h1, h2, h3, h4, h5, h6, p, a, span {font-family: Arial, Helvetica, sans-serif !important;}
+      </style>
+      <![endif]-->
+      <style>
+         /* What it does: Remove spaces around the email design added by some email clients. */
+         /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+         html,
+         body {
+         margin: 0 !important;
+         padding: 0 !important;
+         height: 100% !important;
+         width: 100% !important;
+         background-color: #ffffff;
+         }
+
+         textarea {
+            margin: 0 auto !important;
+            resize: none;
+         }
+         /* What it does: Stops email clients resizing small text. */
+         * {
+         -ms-text-size-adjust: 100%;
+         -webkit-text-size-adjust: 100%;
+         }
+         /* What it does: Centers email on Android 4.4 */
+         div[style*="margin: 16px 0"] {
+         margin: 0 !important;
+         }
+         /* What it does: Stops Outlook from adding extra spacing to tables. */
+         table,
+         td th{
+         mso-table-lspace: 0pt !important;
+         mso-table-rspace: 0pt !important;
+         border:  1px;
+         border-color: #ff02ff;
+         }
+         /* What it does: Fixes webkit padding issue. */
+         table {
+         border-spacing: 0 !important;
+         border-collapse: collapse !important;
+         table-layout: fixed !important;
+         /* margin: 0 auto !important; */
+         }
+         /* What it does: Uses a better rendering method when resizing images in IE. */
+         img {
+         -ms-interpolation-mode:bicubic;
+         }
+         /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+         a {
+         text-decoration: none;
+         }
+         /* What it does: A work-around for email clients meddling in triggered links. */
+         a[x-apple-data-detectors],  /* iOS */
+         .unstyle-auto-detected-links a,
+         .aBn {
+         border-bottom: 0 !important;
+         cursor: default !important;
+         color: inherit !important;
+         text-decoration: none !important;
+         font-size: inherit !important;
+         font-family: inherit !important;
+         font-weight: inherit !important;
+         line-height: inherit !important;
+         }
+         /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+         .im {
+         color: inherit !important;
+         }
+         /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+         .a6S {
+         display: none !important;
+         opacity: 0.01 !important;
+         }
+         /* If the above doesn't work, add a .g-img class to any image in question. */
+         img.g-<img + div {
+         display: none !important;
+         }
+         /* Create one of these media queries for each additional viewport size you'd like to fix */
+         /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+         @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+         u ~ div .email-container {
+         min-width: 320px !important;
+         }
+         }
+         /* iPhone 6, 6S, 7, 8, and X */
+         @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+         u ~ div .email-container {
+         min-width: 375px !important;
+         }
+         }
+         /* iPhone 6+, 7+, and 8+ */
+         @media only screen and (min-device-width: 414px) {
+         u ~ div .email-container {
+         min-width: 414px !important;
+         }
+         }
+      </style>
+      <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+      <!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!-- CSS Reset : END -->
+      <!-- Progressive Enhancements : BEGIN -->
+      <!-- This is where style changes specific to Leap begin. These can be changed, with the approval of Alexander Baldridge, some one else with a degree in graphic design, or any of his superiors -->
+      <style>
+         /*What it does: Imports Poppins for email clients which can use it*/
+         /*N.B. - only Latin, non extended version has been linked. Some font weights are not present. Contact Xander to get more font weights.*/
+         
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 300;
+         font-display: swap;
+         src: local('Poppins Light Italic'), local('Poppins-LightItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLm21lVF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Poppins Italic'), local('Poppins-Italic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiGyp8kv8JHgFVrJJLucHtAOvWDSA.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 500;
+         font-display: swap;
+         src: local('Poppins Medium Italic'), local('Poppins-MediumItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLmg1hVF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 600;
+         font-display: swap;
+         src: local('Poppins SemiBold Italic'), local('Poppins-SemiBoldItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLmr19VF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 700;
+         font-display: swap;
+         src: local('Poppins Bold Italic'), local('Poppins-BoldItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLmy15VF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: italic;
+         font-weight: 800;
+         font-display: swap;
+         src: local('Poppins ExtraBold Italic'), local('Poppins-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/poppins/v9/pxiDyp8kv8JHgFVrJJLm111VF9eOYktMqg.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 300;
+         font-display: swap;
+         src: local('Poppins Light'), local('Poppins-Light'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 400;
+         font-display: swap;
+         src: local('Poppins Regular'), local('Poppins-Regular'), url(https://fonts.gstatic.com/s/poppins/v9/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 500;
+         font-display: swap;
+         src: local('Poppins Medium'), local('Poppins-Medium'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 600;
+         font-display: swap;
+         src: local('Poppins SemiBold'), local('Poppins-SemiBold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 700;
+         font-display: swap;
+         src: local('Poppins Bold'), local('Poppins-Bold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         @font-face {
+         font-family: 'Poppins';
+         font-style: normal;
+         font-weight: 800;
+         font-display: swap;
+         src: local('Poppins ExtraBold'), local('Poppins-ExtraBold'), url(https://fonts.gstatic.com/s/poppins/v9/pxiByp8kv8JHgFVrLDD4Z1xlFd2JQEk.woff2) format('woff2');
+         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+         }
+         
+         /* What it does: Hover styles for buttons */
+         .button-td,
+         .button-a {
+         transition: all 300ms ease-out;
+         border-color: #26d07c !important;
+         }
+         .button-td-primary:hover,
+         .button-a-primary:hover {
+         background: #8edd65 !important;
+         border-color: #8edd65 !important;
+         }
+         /* Media Queries */
+         @media screen and (max-width: 480px) {
+         /* What it does: Forces table cells into full-width rows. */
+         .stack-column,
+         .stack-column-center {
+         display: block !important;
+         width: 100% !important;
+         max-width: 100% !important;
+         direction: ltr !important;
+         }
+         /* And center justify these ones. */
+         .stack-column-center {
+         text-align: center !important;
+         }
+         /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+         .center-on-narrow {
+         text-align: center !important;
+         display: block !important;
+         margin-left: auto !important;
+         margin-right: auto !important;
+         float: none !important;
+         }
+         table.center-on-narrow {
+         display: inline-block !important;
+         }
+         /* What it does: Adjust typography on small screens to improve readability */
+         .email-container p {
+         font-size: 17px !important;
+         }
+         h1{
+         font-size: 22px!important;
+         }
+         h2{
+         font-size: 20px!important;
+         }
+         h3{
+         font-size: 18px!important;
+         }
+         h4, h5, h6 {
+         font-size: 16px!important;
+         }
+         }
+      </style>
+      <!-- Progressive Enhancements : END -->
+   </head>
+   <body>
+      <BR>
+      <div align="center">
+      <!--TOP HEADER-->
+      <table border="0" cellpadding="0" style="max-width: 580px;" width="600">
+         <tbody>
+            <tr>
+               <td align="left" valign="bottom" width="175">
+                  <img src="https://go.leaptodigital.com/l/492601/2022-06-15/58s5pp/492601/16553175415okVJWbu/LeapLogoBlack.png" width="150" height="48">
+               </td>
+               <td align="right" valign="center" width="200">
+                  <p style="font-family: Poppins, arial, sans-serif; color: rgb(46, 46, 46); text-align: right; line-height: 1.5; margin:  0; font-size: 12px; font-weight: 600;">
+                    CompanyCam and Leap Make Your Life Easier
+                  </p>
+                  <a href="http://www.google.com">
+                     <p style="color:#26d07c; font-size: 13px; margin: 0; font-weight: 700; font-family: Poppins, arial, sans-serif; text-align: right; text-decoration: none!important;;">Watch This Video to See How</p>
+                  </a>
+                  </h4>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <BR>
+      <!--YOUR CONTENT GOES HERE-->
+
+      <table border="0" style="max-width: 600px; margin: 0px;" width="600" height="300">
+        <tbody>
+           <tr>
+              <td>
+                 <img src="https://go.leaptodigital.com/l/492601/2022-12-02/5jql7p/492601/1670002488QCL6OWb6/20221109_Company_Cam_Partner_Campaign_CompanyCam___600x300.png" width="600" height="300">
+              </td>
+           </tr>
+        </tbody>
+     </table>
+   
+     <table border="0" style="max-width:  600px;" width="600" cellpadding="0">
+        <tbody>
+           <tr>
+              <td width="" valign="top">
+                 <div align="center">
+                    <h1 style="font-family: 'Poppins', arial, sans-serif; font-size: 35px; font-weight: 800; color: #2e2e2e; text-align: center; line-height: 1.1; width: 500px;">Streamline & Scale with a Holiday Promotion You Can’t Pass Up</h1>
+                 </div>
+                 <div align="center">
+                    <p style="text-align: left; font-family: 'Poppins', arial, sans-serif; font-size:17px;max-width: 560px; font-weight: 500;">
+                        Hey %%first_name%%,  
+                        <BR><BR>
+                            Now through December 31st, 2022, current Leap users will receive a <b>14 day free trial and 50% off</b> your first 2 months when you sign up for CompanyCam! 
+                    </p>
+                 </div><BR>
+                 <!--CTA-->
+                 <table align="center">
+                    <tbody>
+                       <tr>
+                          <td class=""><a bgcolor="26D07C" href="https://leaptodigital.zoom.us/webinar/register/WN_Xoj750uVT16t-5mMFIctZQ" style="background-color: #26D07C; border: 15px solid #26D07C; padding: 0 10px; color: #ffffff; font-family: 'Poppins', arial, sans-serif; font-size: 14px; line-height: 1; text-align: center;  text-decoration: none; display: block; border-radius: 8px; font-weight: bold; ">
+                             Hell Yeah! Book a Demo</a>
+                             <br>
+                          </td>
+                       </tr>
+                    </tbody>
+                 </table>
+                 <div align="center">
+                    <p style="text-align: left; font-family: 'Poppins', arial, sans-serif; font-size:17px;max-width: 560px; font-weight: 500;">
+                            Don’t wait, take advantage of the best apps in the industry on one device!  Are you ready to streamline and scale like never before?   
+                    </p>
+                 </div>
+              </td>
+           </tr>
+        </tbody>
+     </table>
+   
+
+
+
+
+      
+      <!--END YOUR CONTENT-->
+
+      <!--Global Footer-->
+      <BR><BR>
+      <table border="0" style="background-color: #26d07c; border-radius: 10px;" cellpadding="20" width="600">
+         <tbody>
+            <tr>
+               <td valign="top">
+                  <table align="left" border="0" width="300">
+                     <tbody>
+                        <tr>
+                           <td class="">
+                              <!--Leap Logo-->
+                              <img width="100" height="32" src="https://go.leaptodigital.com/l/492601/2022-06-15/58s5p9/492601/1655317540W66ehKgC/LeapLogoWhite.png" style="display: block;">
+                              <br>
+                              <!--Icons-->
+                              <table align="left" border="0" cellpadding="0">
+                                 <tbody>
+                                    <tr>
+                                       <td class=""><a href="https://www.facebook.com/leaptodigital/"><img height="30" src="https://go.leaptodigital.com/l/492601/2022-06-15/58s5ph/492601/1655317540IcluwNRf/fb.png" style="display: inline-block;" width="30"></a>
+                                       </td>
+                                       <td align="center" width="50" class=""><a href="https://www.instagram.com/leaptodigital/"><img height="30" src="https://go.leaptodigital.com/l/492601/2022-06-15/58s5pl/492601/16553175419PP4ONyw/instagram.png" style="display: inline-block;" width="30"></a>
+                                       </td>
+                                       <td class=""><a href="https://www.linkedin.com/company/leapllc/mycompany/verification/"><img height="30" src="https://go.leaptodigital.com/l/492601/2022-06-15/58s5pd/492601/1655317540d5KGBlgE/linkedin.png" style="display: inline-block;" width="30"></a>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                              <br><br><br>
+                              <!--Leap Address-->
+                              <span style="font-family: 'Poppins', arial, sans-serif; font-size: 12px; font-weight: 600; color: #fff; text-align: left; line-height: 1.2; display: inline-block;">
+                                 <B>Leap LLC</B><br>8820 Columbia 100 Pkwy Suite 300<br>Columbia, MD 21045<BR>844-370-5327
+                              </span>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td valign="top" width="300">
+                  <table align="right" border="0">
+                     <tbody>
+                        <tr>
+                           <td class=""><span style="font-family: 'Poppins', arial, sans-serif; font-size: 13px; font-weight: 600; color: #fff; text-align: right; display: inline-block; ">
+                              Leap is the #1 Residential Contractor Tool
+                              <br>
+                              <a href="https://leaptodigital.com/get-more-information-on-leap/?utm_source=Inbound+%2B+Activity&amp;utm_medium=Email+1&amp;utm_campaign=20220614+Subcontractor+Price+Sheet+ebook+email+1&amp;utm_id=+20220619+Roofing+Broadstroke_TOP+of+FUNNEL&amp;utm_term=5" style="color:#2e2e2e; font-size: 13px; font-weight: 700;">Schedule a Demo Today</a></span></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+      <!--Unsubscribe-->
+      <table border="0" width="600">
+         <tbody>
+            <tr>
+               <td align="center" class="">
+                  <a href="%%unsubscribe%%" style="font-family: 'Poppins', arial, sans-serif; font-size: 10px; font-weight: 500; color: #D8D8D8; text-align: left;">Unsubscribe</a></td>
+            </tr>
+         </tbody>
+      </table>
+
+   </div>
+   </body>
+</html>
